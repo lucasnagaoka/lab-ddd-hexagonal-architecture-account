@@ -17,16 +17,16 @@ public class AccountServiceImpl implements AccountService {
     @Autowired
     private AccountRepository accountRepository;
 
-    @Value("{lab.account.exceptions.account-dont-exists-message}")
+    @Value("${lab.account.exceptions.account-dont-exists-message}")
     private String messageExceptionAccountNotFound;
 
-    @Value("{lab.account.exceptions.account-dont-exists-description}")
+    @Value("${lab.account.exceptions.account-dont-exists-description}")
     private String descriptionExceptionAccountNotFound;
 
-    @Value("{lab.account.exceptions.account-without-balance-message}")
+    @Value("${lab.account.exceptions.account-without-balance-message}")
     private String messageExceptionAccountWithoutBalance;
 
-    @Value("{lab.account.exceptions.account-without-balance-description}")
+    @Value("${lab.account.exceptions.account-without-balance-description}")
     private String descriptionExceptionAccountWithoutBalance;
 
     @Override
