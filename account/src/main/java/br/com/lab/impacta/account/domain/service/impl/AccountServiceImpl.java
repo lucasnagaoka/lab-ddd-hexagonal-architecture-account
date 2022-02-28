@@ -46,11 +46,11 @@ public class AccountServiceImpl implements AccountService {
 
         boolean debited = account.debit(valueOfDebit);
 
-        if (!debited) {
-            throw new AccountWithoutBalanceException(messageExceptionAccountWithoutBalance, descriptionExceptionAccountWithoutBalance);
-        }
+        if (!debited)
+            throw new AccountWithoutBalanceException(
+                    messageExceptionAccountWithoutBalance,
+                    descriptionExceptionAccountWithoutBalance);
 
         accountRepository.save(account);
-
     }
 }
